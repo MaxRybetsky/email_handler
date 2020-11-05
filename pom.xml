@@ -23,7 +23,8 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -69,13 +70,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
-  </build>
-
-  <reporting>
     <plugins>
       <plugin>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>9</source>
+          <target>9</target>
+        </configuration>
       </plugin>
     </plugins>
-  </reporting>
+  </build>
 </project>
